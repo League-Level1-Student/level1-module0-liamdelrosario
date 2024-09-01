@@ -77,14 +77,20 @@ public class RainGame extends PApplet {
         ellipse(randomNumber, rainY, 30, 50);
         rainY+=6;
         fill(0,0,0);
-        rect(bucketWidth, 530, 50, 70);
+        rect(bucketWidth, 534, 50, 70);
         bucketWidth=mouseX;
+        if(rainY==534) {
+        	     checkCatch(randomNumber);
+        	     
+        }
+        fill(0, 0, 0);
+           textSize(16);
+           text("Score: " + score, 20, 20);
         
         if(rainY>=600) {       
         	randomNumber = (int) random(width);
-
-
-        	rainY=50;
+        	
+        	rainY=30;
 
         }
         
