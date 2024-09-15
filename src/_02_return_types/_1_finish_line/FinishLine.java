@@ -49,6 +49,7 @@ public class FinishLine {
 			int dist = new Random().nextInt(31);
 			rob.move(dist);
 			totalDistance+=dist;
+			 drawFinishLine();
 		}
 	}
 	
