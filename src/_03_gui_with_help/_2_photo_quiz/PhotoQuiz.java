@@ -26,13 +26,13 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address” )
-
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component image1;
 		// 3. use the "createImage()" method below to initialize your Component
-
+		image1=createImage("file:///Users/league/git/level1-module0-liamdelrosario/images/chess.png");
 		// 4. add the image to the quiz window
-
+		quizWindow.add(image1);
+		quizWindow.pack();
 		// 5. call the pack() method on the quiz window
 
 		// 6. ask a question that relates to the image
