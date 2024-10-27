@@ -19,7 +19,6 @@ public class PhotoQuiz {
 	public void run() {
 
 		JFrame quizWindow = new JFrame();
-		quizWindow.setVisible(true);
 		// This will make sure the program exits when you close the window
 		quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -33,6 +32,7 @@ public class PhotoQuiz {
 		// 4. add the image to the quiz window
 		quizWindow.add(image1);
 		quizWindow.pack();
+		quizWindow.setVisible(true);
 
 		// 5. call the pack() method on the quiz window
 
