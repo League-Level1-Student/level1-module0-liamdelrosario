@@ -25,6 +25,7 @@ public class BodyPartQuiz {
 	String secondImage = "src/_03_gui_with_help/_4_body_part_quiz/leonardo.jpeg";
 	String thirdImage = "src/_03_gui_with_help/_4_body_part_quiz/morgan.jpeg";
 	String fourthImage = "src/_03_gui_with_help/_4_body_part_quiz/jack.jpeg";
+	String FifthImage = "src/_03_gui_with_help/_4_body_part_quiz/hmmmmmmmm.png";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -50,16 +51,64 @@ public class BodyPartQuiz {
 	}
 
 	private void startQuiz() {
-
 		// 1. Make an int variable to hold the score.
-		int score = 0;
+		int score = 0;		
+
 		// 2. Set the size of the window in the initializeGui() method 
 		initializeGui();
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
 		if(guess.equals("arnold")) {
 			JOptionPane.showMessageDialog(null, "Thats right he is famous for being a advoroaak and dating a werid a wafchjkmwqedjvgjn");
+			score+=1;
+
+		} else if(guess.contentEquals("idk")) {
+			JOptionPane.showMessageDialog(null, "You are also right I dont have a clue how this is 8 points");
+			score+=8;
+		} else {
+			JOptionPane.showMessageDialog(null, "You do not know him");
+			score-=1;
 		}
+				showNextImage();
+		String glue = JOptionPane.showInputDialog("who is this?");
+		if(glue.equals("jack")) {
+			JOptionPane.showMessageDialog(null, "how is .... he");
+			score+=1;
+		} else {
+			score-=1;
+			JOptionPane.showMessageDialog(null, "sorry but you are wrong ):<");
+		}
+		showNextImage();
+		String gle = JOptionPane.showInputDialog("who is this?");
+		if(gle.equals("leonardo")) {
+			JOptionPane.showMessageDialog(null, "That board could have definelty fit two people LEO!!!!!!!!!");
+			score+=1;
+		} else {
+			score-=1;
+			JOptionPane.showMessageDialog(null, "I Don't blame you.");
+		}
+		showNextImage();
+		String gue = JOptionPane.showInputDialog("who is this?");
+		if(gue.equals("morgan")) {
+			JOptionPane.showMessageDialog(null, "I wish i knew who are these people are if only");
+			score+=1;
+		} else {
+			score-=1;
+			JOptionPane.showMessageDialog(null, "If you got them all wrong I am happy for you (:");
+		}
+		showNextImage();
+		String ge = JOptionPane.showInputDialog("who is this?");
+		if(ge.equals("arthur")) {
+			JOptionPane.showMessageDialog(null, "You are semi right");
+			score+=1;
+		}else if(ge.equals("Tatitus Killgore")){
+			JOptionPane.showMessageDialog(null, "That is who he is teh famous Merchant and dealer of all goods weapons product and trades and oil you deserve all the points in the world.");
+			score+=1234567890;
+			} else {
+			JOptionPane.showMessageDialog(null, "Maybe not mate sure sounds like someone he offed though");
+			score-=495835792;
+		}
+		JOptionPane.showMessageDialog(null, "Congrats you have a score of "+score+" you must be super proud all this hard work for this right???????????");
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
 
@@ -67,7 +116,6 @@ public class BodyPartQuiz {
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
-		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
 
@@ -98,6 +146,8 @@ public class BodyPartQuiz {
 		imageLabel = loadImage(thirdImage);
 		imageList.add(imageLabel);
 		imageLabel = loadImage(fourthImage);
+		imageList.add(imageLabel);
+		imageLabel = loadImage(FifthImage);
 		imageList.add(imageLabel);
 	}
 
