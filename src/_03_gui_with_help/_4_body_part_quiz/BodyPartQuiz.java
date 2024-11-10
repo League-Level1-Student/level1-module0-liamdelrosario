@@ -71,7 +71,7 @@ public class BodyPartQuiz {
 		}
 				showNextImage();
 		String glue = JOptionPane.showInputDialog("who is this?");
-		if(glue.equals("jack")) {
+		if(glue.equals("leonardo")) {
 			JOptionPane.showMessageDialog(null, "how is .... he");
 			score+=1;
 		} else {
@@ -80,7 +80,7 @@ public class BodyPartQuiz {
 		}
 		showNextImage();
 		String gle = JOptionPane.showInputDialog("who is this?");
-		if(gle.equals("leonardo")) {
+		if(gle.equals("morgan")) {
 			JOptionPane.showMessageDialog(null, "That board could have definelty fit two people LEO!!!!!!!!!");
 			score+=1;
 		} else {
@@ -89,7 +89,7 @@ public class BodyPartQuiz {
 		}
 		showNextImage();
 		String gue = JOptionPane.showInputDialog("who is this?");
-		if(gue.equals("morgan")) {
+		if(gue.equals("jack")) {
 			JOptionPane.showMessageDialog(null, "I wish i knew who are these people are if only");
 			score+=1;
 		} else {
