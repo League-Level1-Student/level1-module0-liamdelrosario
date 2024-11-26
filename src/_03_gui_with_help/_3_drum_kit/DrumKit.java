@@ -38,7 +38,6 @@ public class DrumKit implements MouseListener {
 		//  Use the image of a drum provided ("snare.jpg") or
 		//  download an image of a drum from the Internet and drop it into the
 		//  Drum Kit recipe package.
-
 		//  Put the name of the drum image file in a String variable.
 		drumLabel = createLabelImage("snare.jpg");
 		//  Edit the next line to use your String variable

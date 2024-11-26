@@ -46,7 +46,7 @@ public class PhotoQuiz {
 			System.out.println("correct");
 		}
 		// 8. print "INCORRECT" if the answer is wrong
-		if(healG.equals("no")) {
+		else if(healG.equals("no")) {
 			JOptionPane.showMessageDialog(null, "Meet me at fourth street avanue this mourning we have some 'Arranged' work to do.");
 			System.out.println("incorrect");
 		}	else {
