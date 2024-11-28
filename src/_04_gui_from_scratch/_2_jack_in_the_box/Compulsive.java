@@ -1,6 +1,8 @@
 package _04_gui_from_scratch._2_jack_in_the_box;
 
 import java.applet.AudioClip;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
 import javax.swing.JPanel;
 import javax.swing.Icon;
@@ -10,17 +12,26 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Compulsive {
+public class Compulsive implements ActionListener {
 
-	public static void main(String[] args) {
+	
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+
+	JButton button = new JButton();
+	int score = 0;
+	private void run() {
 		// TODO Auto-generated method stub
-		JFrame frame = new JFrame();
-		JPanel panel = new JPanel();
-
-		JButton Button = new JButton();
-		  panel.add(Button);
-        frame.pack();
+		frame.add(button);
+	
+	button.setText("Surprise");
+	frame.pack();
+	button.addActionListener(this);
+	frame.setVisible(true);
+	
 	}
+	
+	
 		private void showPicture(String fileName) {
 		     try {
 		          JLabel imageLabel = createLabelImage(fileName);
@@ -62,5 +73,23 @@ public class Compulsive {
 	     }
 	
 }
+public static void main(String[] args) {
+		new Compulsive().run();
+	}
 
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	if(e.getSource()==button) {
+		score+=1;
+	}
+	if(score==5) {
+		showPicture("jackInTheBox.png");
+		for(int i=0; i<50; i++) {
+			playSound("homer-woohoo.wav");
+		}
+		System.out.println("me enjoy food");
+	}
+}
 }
