@@ -1,14 +1,12 @@
 package _04_gui_from_scratch._4_cuteness_tv;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URI;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import _04_gui_from_scratch._3_sound_effects_machine.SlopeMachine;
-
-public class VideoNOl {
+public class VideoNOl implements ActionListener{
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JButton button = new JButton();
@@ -22,8 +20,13 @@ public class VideoNOl {
 	button.setText("Im a duck that is a best man");
 	button1.setText("This rain video is especially calming at 1:38:24");
 	button2.setText("What more cudly than a unicorn.....");
+	button.addActionListener(this);
+	button1.addActionListener(this);
+	button2.addActionListener(this);
+
 	frame.pack();
 	frame.setVisible(true);
+	
 	}
 	void showDucks() {
 	     playVideo("https://www.youtube.com/watch?v=MtN1YnoL46Q");
@@ -35,6 +38,7 @@ public class VideoNOl {
 
 	void showFluffyUnicorns() {
 	     playVideo("https://www.youtube.com/watch?v=bl2C2KSSQao");
+	     System.out.println("G"+"d");
 	}
 
 	void playVideo(String videoID) {
@@ -54,10 +58,26 @@ public class VideoNOl {
 	          e.printStackTrace();
 	     }
 	}
+	void actionPerformed() {
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new VideoNOl().Run();
 
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==button) {
+			showDucks();
+		}
+		if(e.getSource()==button1) {
+			showRain();
+		}
+		if(e.getSource()==button2) {
+			showFluffyUnicorns();
+		}
 	}
 
 }
